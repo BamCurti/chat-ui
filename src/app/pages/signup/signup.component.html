@@ -2,8 +2,12 @@
   <form [formGroup]="form" (ngSubmit)="sendData()" >
     ={{form.valid}}=
     <div>
-      <label for="fullname">Name </label>
-      <input type="text" name="fullname" formControlName="fullName" placeholder="Full name">
+      <label for="name">Name </label>
+      <input type="text" name="name" formControlName="name" placeholder="Name">
+    </div>
+    <div>
+      <label for="last-name">Last name </label>
+      <input type="text" name="last-name" formControlName="lastName" placeholder="Last name">
     </div>
     <div>
       <label for="username">Username </label>
@@ -20,13 +24,15 @@
     </div>
     <div>
       <label for="confirm-password">Confirm Password </label>
-      <input type="password" name="confirm-password" formControlName="confirmPassword"  placeholder="Confirm Password">
+      <input [type]="showPassword ? 'text': 'password'" name="confirm-password" formControlName="confirmPassword"  placeholder="Confirm Password">
     </div>
     <div>
-      <button type="submit">Saoko</button>
+      <label for="terms">I Agree to <a href="">Terms</a></label>
+      <input type="checkbox" name="terms" formControlName="terms">
     </div>
-
-
+    <div>
+      <button type="submit">Sign Up</button>
+    </div>
   </form>
 
 
