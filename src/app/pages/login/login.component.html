@@ -1,12 +1,12 @@
 <div>
-  <form action="">
+  <form (submit)="login()">
     <div>
       <label for="email">Email </label>
-      <input type="text" name="email">
+      <input type="text" name="email" [(ngModel)]="credentials.email">
     </div>
     <div>
       <label for="password">Password </label>
-      <input type="text" name="password">
+      <input type="text" name="password" [(ngModel)]="credentials.password">
     </div>
     <div>
       <button>Log in</button>

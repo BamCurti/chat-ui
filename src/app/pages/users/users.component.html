@@ -4,10 +4,12 @@
   <tr>
     <th>Name</th>
     <th>Email</th>
+    <th></th>
   </tr>
   <tr *ngFor="let user of users">
     <td>{{user.name}}</td>
     <td>{{user.email}}</td>
+    <td><a routerLink="/posts" [queryParams]="{user:user.id}">Send post</a></td>
   </tr>
 
 </table>

@@ -10,11 +10,9 @@ import { User } from 'src/app/shared/interfaces/user';
 export class UsersComponent implements OnInit {
 
   users: User[] = [];
-  private userService: UserService;
   hasFetch: boolean;
 
-  constructor(userService: UserService) {
-    this.userService = userService;
+  constructor(private userService: UserService) {
     this.hasFetch = false;
   }
 
