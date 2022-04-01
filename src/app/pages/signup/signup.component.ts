@@ -4,6 +4,8 @@ import axios from 'axios';
 //Angular
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {Router} from '@angular/router';
+import { AuthService } from './../../shared/services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +18,11 @@ export class SignupComponent implements OnInit {
   axios: any
   url: string = 'http://localhost:3000';
 
-  constructor(formBuilder: FormBuilder) {
+  constructor(
+      formBuilder: FormBuilder,
+      private router: Router,
+      private authService: AuthService
+    ) {
     this.axios = axios.defaults;
 
     this.form = formBuilder.group({
@@ -49,17 +55,9 @@ export class SignupComponent implements OnInit {
 
     const form = this.form.getRawValue();
 
-
-    axios.post(this.url, {
-      name: form.name,
-      lastName: form.lastName,
-      password: form.password,
-      email: form.email
-    }).then(response => {
-      console.log(response);
-    }).catch(error => {
-      console.log(error)
-    })
+    this.authService.signup(form)
+    .then(response => this.router.navigate(['/login']))
+    .catch(error => alert(error.response.data.message));
   }
 
   matchPasswords() {

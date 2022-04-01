@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from './../../shared/services/login.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { Router } from '@angular/router';
+//import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,13 @@ export class LoginComponent implements OnInit {
     password:'',
   };
 
-  constructor(private loginService: LoginService, private authService: AuthService, private router: Router) { }
+  private secret = 'tu2yhFkeMc^EXYQ4E@gFy%y0%7';
+
+  constructor(
+    private loginService: LoginService,
+    private authService: AuthService,
+    private router: Router,
+  ) {   }
 
   ngOnInit(): void {
   }
@@ -22,11 +29,11 @@ export class LoginComponent implements OnInit {
   login() {
     this.loginService.login(this.credentials)
     .then(response => {
-      this.authService.save(response.token);
-      console.log('Lol')
+      console.log(response)
+      this.authService.save(response.data.token);
       this.router.navigate(['/users']);
     }).catch(err => {
-
+      alert(err)
     })
   }
 
