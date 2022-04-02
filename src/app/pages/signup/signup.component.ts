@@ -1,6 +1,3 @@
-//General
-import axios from 'axios';
-
 //Angular
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -15,7 +12,6 @@ import { AuthService } from './../../shared/services/auth.service';
 export class SignupComponent implements OnInit {
   showPassword: boolean = false
   form: FormGroup
-  axios: any
   url: string = 'http://localhost:3000';
 
   constructor(
@@ -23,7 +19,6 @@ export class SignupComponent implements OnInit {
       private router: Router,
       private authService: AuthService
     ) {
-    this.axios = axios.defaults;
 
     this.form = formBuilder.group({
       'name': ['', Validators.required],

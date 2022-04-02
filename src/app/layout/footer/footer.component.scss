@@ -1,4 +1,8 @@
+@import '../../../styles.scss';
+
 div {
-  background-color: orangered;
-  color: white;
+  background-color: $main;
+  p {
+    color: $white;
+  }
 }

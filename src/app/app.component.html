@@ -1,21 +1,10 @@
-<app-header></app-header>
+<div>
+  <app-header></app-header>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
-<!--
-<form (submit)="doOnClick($event)">
-  <input type="text" placeholder="Title" [(ngModel)]="searchValue" name="title">
-  <button [disabled]="!searchValue">Add title</button>
-</form>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 
-<input type="text" [(ngModel)]="searchValue" (keyup)="doSearch()">
-
-<ul>
-  <li *ngFor="let movie of filteredMovies">{{movie}}</li>
-</ul>
-
-<app-->
-
-
-
-<app-footer></app-footer>
+</div>

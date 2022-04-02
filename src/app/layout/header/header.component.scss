@@ -1,28 +1,48 @@
+@import '../../../styles.scss';
+
+$header-height: 56px;
+
 div {
-  background-color: darkgreen;
-  color: white;
+  background-color: $main;
+  color: $white;
+
+  width: 100%;
+  height: $header-height;
+
   display:flex;
   flex-direction: row;
   align-items: center;
+
+  h1{
+    font-weight: 700;
+    width: 200px;
+  }
 }
 
 .navbar {
   ul{
     text-decoration: none;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
 
-    li > a > button {
-      padding: 4px 12px;
-      background-color: #333;
-      color: white;
-      border: none;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 1rem;
+    li {
 
+      a > button {
+        height: calc($header-height - 8px);
+        width: 100px;
+
+        background-color: $secondary;
+        color: $base;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.2rem;
+        border-radius: 12px;
     }
-
+  }
   }
 
 
