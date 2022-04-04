@@ -2,8 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-//import { JwtHelperService } from '@auth0/angular-jwt';
 
+//material
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+//Angular components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -26,12 +34,17 @@ import { PostsComponent } from './pages/posts/posts.component';
     PostsComponent,
   ],
   imports: [
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-  //  JwtHelperService
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

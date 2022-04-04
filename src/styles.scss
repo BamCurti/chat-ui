@@ -1,27 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 //font
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
-
-//Colors to use
-$main: #364652;
-$secondary: #071108;
-$tertiary: #BFB1C1;
-$complementary: #B5BEC6;
-$base: #C7DBE6;
-$white: #eee;
+@import './assets/styles/vars';
 
 * {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: $base;
-
-  display: flex;
-  flex-direction: column;
-
-  footer {
-    margin-top: auto;
-  }
+  background-color: $white;
+  min-height: 100vh;
 }
+
+html, body { height: 100%; }
+body { margin: 0; }

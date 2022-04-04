@@ -1,18 +1,22 @@
-<div>
-  <form (submit)="login()">
-    <div>
-      <label for="email">Email </label>
-      <input type="text" name="email" [(ngModel)]="credentials.email">
-    </div>
-    <div>
-      <label for="password">Password </label>
-      <input type="text" name="password" [(ngModel)]="credentials.password">
-    </div>
-    <div>
-      <button>Log in</button>
-    </div>
-    <div>
-      Don't have an account? <a routerLink="/signup">Sign up here</a>
-    </div>
-  </form>
+<div class="container">
+  <div class="form-container">
+    <h2>Login</h2>
+    <form (submit)="login()">
+      <mat-form-field>
+        <label for="email">Email </label>
+        <input type="text" name="email" [(ngModel)]="credentials.email" matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <label for="password">Password </label>
+        <input type="text" name="password" [(ngModel)]="credentials.password" matInput>
+      </mat-form-field>
+      <div class="form-group button">
+        <button mat-raised-button color="primary">Log in</button>
+      </div>
+      <div class="signup">
+        Don't have an account? <a routerLink="/signup">Sign up here</a>
+      </div>
+    </form>
+  </div>
 </div>
+

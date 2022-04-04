@@ -3,7 +3,7 @@
 $header-height: 56px;
 
 div {
-  background-color: $main;
+  //background-color: $main;
   color: $white;
 
   width: 100%;
@@ -14,8 +14,8 @@ div {
   align-items: center;
 
   h1{
-    font-weight: 700;
-    width: 200px;
+    font-size: 2rem;
+    width: 208px;
   }
 }
 
@@ -27,22 +27,6 @@ div {
     flex-direction: row;
     gap: 8px;
 
-    li {
-
-      a > button {
-        height: calc($header-height - 8px);
-        width: 100px;
-
-        background-color: $secondary;
-        color: $base;
-        border: none;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1.2rem;
-        border-radius: 12px;
-    }
-  }
   }
 
 
