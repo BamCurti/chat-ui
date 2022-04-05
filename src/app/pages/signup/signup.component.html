@@ -1,40 +1,36 @@
-<div>
-  <form [formGroup]="form" (ngSubmit)="sendData()" >
-    ={{form.valid}}=
-    <div>
-      <label for="name">Name </label>
-      <input type="text" name="name" formControlName="name" placeholder="Name">
-    </div>
-    <div>
-      <label for="last-name">Last name </label>
-      <input type="text" name="last-name" formControlName="lastName" placeholder="Last name">
-    </div>
-    <div>
-      <label for="username">Username </label>
-      <input type="text" name="username" formControlName="username" placeholder="Username">
-    </div>
-    <div>
-      <label for="email">Email </label>
-      <input type="email" name="email" formControlName="email" placeholder="Email">
-    </div>
-    <div>
-      <label for="password">Password </label>
-      <input [type]="showPassword ? 'text' : 'password'" name="password" formControlName="password" placeholder="Password">
-      <button (click)="toogleShowPassword()" >{{showPassword ? 'Hide': 'Show'}}</button>
-    </div>
-    <div>
-      <label for="confirm-password">Confirm Password </label>
-      <input [type]="showPassword ? 'text': 'password'" name="confirm-password" formControlName="confirmPassword"  placeholder="Confirm Password">
-    </div>
-    <div>
-      <label for="terms">I Agree to <a href="">Terms</a></label>
-      <input type="checkbox" name="terms" formControlName="terms">
-    </div>
-    <div>
-      <button type="submit">Sign Up</button>
-    </div>
-  </form>
+<div class="container">
+  <div class="form-container">
+    <h2>Sign up</h2>
 
-
+    <form [formGroup]="form" (ngSubmit)="sendData()">
+      <mat-form-field>
+        <mat-label for="name">Name </mat-label>
+        <input type="text" name="name" formControlName="name" placeholder="Name" matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="last-name">Last name </mat-label>
+        <input type="text" name="last-name" formControlName="lastName" placeholder="Last name" matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="username">Username </mat-label>
+        <input type="text" name="username" formControlName="username" placeholder="Username" matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="email">Email </mat-label>
+        <input type="email" name="email" formControlName="email" placeholder="Email" matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="password">Password </mat-label>
+        <input [type]="showPassword ? 'text' : 'password'" name="password" formControlName="password" placeholder="Password" matInput>
+        <mat-icon matSuffix (click)="toogleShowPassword()">{{showPassword ? 'visibility_off': 'visibility'}}</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="confirm-password">Confirm Password </mat-label>
+        <input [type]="showPassword ? 'text': 'password'" name="confirm-password" formControlName="confirmPassword"  placeholder="Confirm Password" matInput>
+      </mat-form-field>
+      <mat-checkbox name="terms" formControlName="terms">I Agree to <a href="">Terms and Conditions</a></mat-checkbox>
+      <button mat-raised-button color="primary">Sign up</button>
+    </form>
+  </div>
   <div>Have an account? <a routerLink="/login">Log in</a></div>
 </div>

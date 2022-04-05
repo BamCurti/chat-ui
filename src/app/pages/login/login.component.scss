@@ -5,41 +5,43 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-}
 
-.form-container {
-  position: inherit;
-  width: 352px;
-  height: 350px;
-  padding: 20px;
-  background-color: $base;
-  border: 2px solid $main;
-  border-radius: 3px;
+  .form-container {
+    position: inherit;
+    width: 352px;
+    height: 350px;
+    padding: 20px;
+    background-color: $base;
+    border: 2px solid $main;
+    border-radius: 3px;
 
 
-  h2 {
-    font-size: 1.5rem;
-    color: $secondary;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2em;
-
-    mat-form-field {
+    h2 {
+      font-size: 1.5rem;
+      color: $secondary;
+    }
+    form {
       display: flex;
       flex-direction: column;
+      gap: 1.2em;
 
-      input {
-        margin-top: 4px;
-        border: 0;
+      mat-form-field {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          margin-top: 4px;
+          border: 0;
+        }
+
+      }
+
+      .signup {
+        font-size: $sm-size;
       }
 
     }
-
-    .signup {
-      font-size: $sm-size;
-    }
-
   }
+
 }
+

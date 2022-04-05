@@ -9,6 +9,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 //Angular components
@@ -44,7 +46,9 @@ import { PostsComponent } from './pages/posts/posts.component';
     HttpClientModule,
     NoopAnimationsModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
