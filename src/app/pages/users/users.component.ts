@@ -11,6 +11,11 @@ export class UsersComponent implements OnInit {
 
   users: User[] = [];
   hasFetch: boolean;
+  selectedUser: User= {
+    id: '',
+    name: '',
+    email: '',
+  }
 
   constructor(private userService: UserService) {
     this.hasFetch = false;
@@ -22,6 +27,18 @@ export class UsersComponent implements OnInit {
       this.hasFetch = true;
       this.users = users;
     })
+  }
+
+  setSelectUser(user: User){
+    console.log(user)
+  }
+
+  clearUser(u: User){
+    this.selectedUser = {
+      id: '',
+      name: '',
+      email: '',
+    }
   }
 
 }

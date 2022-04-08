@@ -6,10 +6,12 @@
     <th>Email</th>
     <th></th>
   </tr>
-  <tr *ngFor="let user of users">
+  <tr [ngClass]="{'active': user.id === selectedUser.id}" *ngFor="let user of users" (click)="setSelectUser(user)">
     <td>{{user.name}}</td>
     <td>{{user.email}}</td>
     <td><a routerLink="/posts" [queryParams]="{user:user.id}">Send post</a></td>
   </tr>
 
 </table>
+
+<app-user-details [item]="selectedUser" (onUserClear)="clearUser"></app-user-details>

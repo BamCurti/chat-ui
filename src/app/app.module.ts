@@ -23,6 +23,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { UsersComponent } from './pages/users/users.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PostsComponent } from './pages/posts/posts.component';
     NotFoundComponent,
     UsersComponent,
     PostsComponent,
+    UserDetailsComponent,
   ],
   imports: [
     MatInputModule,
