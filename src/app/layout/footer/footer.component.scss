@@ -2,7 +2,9 @@
 
 div {
   background-color: $main;
-  p {
+  display: flex;
+  justify-content: center;
+  small {
     color: $white;
   }
 }

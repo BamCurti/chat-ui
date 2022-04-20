@@ -4,14 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 //material
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/icon';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 //Angular components
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +17,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { UsersComponent } from './pages/users/users.component';
 import { PostsComponent } from './pages/posts/posts.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+
+import { MaterialModule } from './modules/material/material.module';
 
 @NgModule({
   declarations: [
@@ -38,19 +33,12 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
     UserDetailsComponent,
   ],
   imports: [
-    MatInputModule,
-    MatFormFieldModule,
-    MatCheckboxModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NoopAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonToggleModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

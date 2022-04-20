@@ -16,6 +16,7 @@ export class UsersComponent implements OnInit {
     name: '',
     email: '',
   }
+  displayedColumns = ['name', 'email', 'posts']
 
   constructor(private userService: UserService) {
     this.hasFetch = false;

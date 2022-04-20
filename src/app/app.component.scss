@@ -1,7 +1,13 @@
 div {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 1rem;
+  width: 100%;
+
+  article {
+    align-self: center;
+  }
 
   footer {
     margin-top: auto;
